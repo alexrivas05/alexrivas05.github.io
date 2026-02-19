@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slides</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div id="menuBar">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="latexSlides.html">Latex Slides</a>
+        <a href="latexReport.html">Latex Report</a>
+    </div>
+    <iframe 
+        src="CSC318_Report_Slides.pdf"
+        width="100%" 
+        height="1200px">
+    </iframe>
+
+    <pre><code>\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{AnnArbor}
+
+\title{Document Classes and Structural Design in LaTeX}
+\author{Joshua Lee, Anthony Dominguez, Soad Hossain, Alex Rivas} 
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Overview}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{What is LaTeX?}
+\begin{itemize}
+    \item A document preparation system based on markup
+    \item Widely used in academic, scientific, and technical writing
+    \item Separates logical structure from visual formatting
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Core Idea:} Authors focus on meaning and organization — not manual formatting.
+\end{frame}
+
+\begin{frame}{Why Structure Matters}
+\begin{itemize}
+    \item Ensures consistency across large documents
+    \item Produces professional-quality output
+    \item Ideal for technical and math-heavy work
+\end{itemize}
+
+LaTeX prioritizes semantic organization over visual styling.
+\end{frame}
+
+\section{Document Classes in LaTeX}
+
+\begin{frame}{Document Classes in LaTeX}
+Every LaTeX file begins with:
+
+\texttt{\textbackslash documentclass\{article\}}
+
+\begin{itemize}
+    \item Defines document architecture
+    \item Controls layout, hierarchy, numbering, spacing
+    \item Acts as a structural blueprint
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Common Document Classes}
+\begin{itemize}
+    \item \texttt{article} — essays, homework, short papers
+    \item \texttt{report} — longer technical documents
+    \item \texttt{book} — full-length structured texts
+    \item \texttt{beamer} — presentations (frame-based structure)
+\end{itemize}
+
+Changing the class changes the document model.
+\end{frame}
+
+\section{Structural Commands and Hierarchy}
+
+\begin{frame}{Structural Commands}
+LaTeX uses logical commands:
+
+\begin{itemize}
+    \item \texttt{\textbackslash section}
+    \item \texttt{\textbackslash subsection}
+    \item \texttt{\textbackslash chapter}
+\end{itemize}
+
+\textbf{Important:} These describe meaning, not formatting.
+\end{frame}
+
+\begin{frame}{Hierarchy and Automation}
+\begin{itemize}
+    \item Formatting determined by document class
+    \item Numbering handled automatically
+    \item Table of contents generated from structure \texttt{\textbackslash tableofcontents}
+\end{itemize}
+
+Structure drives presentation.
+\end{frame}
+
+\section{The Preamble and Document Body}
+
+\begin{frame}{Two Main Parts of a LaTeX File}
+\textbf{1. Preamble}
+\begin{itemize}
+    \item Before \texttt{\textbackslash begin\{document\}}
+    \item Defines class, loads packages, sets options
+\end{itemize}
+
+\textbf{2. Document Body}
+\begin{itemize}
+    \item Contains actual content
+    \item Uses structural commands
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Packages and Modularity}
+Packages extend functionality.
+
+Example:
+\texttt{\textbackslash usepackage\{amsmath\}}
+
+\begin{itemize}
+    \item Enhances mathematical typesetting
+    \item Adds specialized capabilities
+\end{itemize}
+
+Classes provide structure.  
+Packages provide features.
+\end{frame}
+
+\section{Separation of Content and Presentation}
+
+\begin{frame}{Core Design Principle}
+LaTeX separates:
+
+\begin{itemize}
+    \item \textbf{Content} — what the text represents
+    \item \textbf{Presentation} — how it appears
+\end{itemize}
+
+Reflects computer science principles:
+\begin{itemize}
+    \item Abstraction
+    \item Modularity
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Architectural Flexibility}
+Switching document classes:
+
+\texttt{\textbackslash documentclass\{article\}}
+
+to
+
+\texttt{\textbackslash documentclass\{report\}}
+
+Changes hierarchy and formatting  
+without modifying content.
+\end{frame}
+
+\section{Beamer as a Structural Extension}
+
+\begin{frame}{Beamer's Structural Model}
+\begin{itemize}
+    \item Designed for presentations
+    \item Uses \textbf{frames} instead of pages
+    \item Maintains logical structure
+\end{itemize}
+
+Visual format changes.  
+Philosophy remains the same.
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+    \item Document classes form LaTeX’s foundation
+    \item Structure is defined logically
+    \item Presentation is controlled automatically
+    \item Packages extend functionality
+\end{itemize}
+
+Understanding document classes is essential to mastering LaTeX.
+\end{frame}
+
+\begin{frame}
+\centering
+\Huge Thank you!
+\end{frame}
+
+\end{document}</code></pre>
+</body>
+</html>

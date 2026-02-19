@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div id="menuBar">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="latexSlides.html">Latex Slides</a>
+        <a href="latexReport.html">Latex Report</a>
+    </div>
+    <iframe 
+        src="report.pdf"
+        width="100%" 
+        height="1200px">
+    </iframe>
+
+    <pre><code>\documentclass{article}
+\usepackage{amsmath}
+
+\title{Document Classes and Structural Design in LaTex} 
+\author{Joshua Lee, Anthony Dominguez, Soad Hossain, Alex Rivas} 
+\date{02/19/2026} 
+
+\begin{document} 
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction} 
+
+LaTex is a reliable document preparation system that is widely used in academics, scientific and technical environments. Unlike traditional word processors, LaTex is heavily based on a markup language that separates the logical structure of a document from its visual presentation. This sort of structural philosophy allows authors to focus on meaning and organization rather than manual formatting. As a result, LaTex generates consistent, professional quality documents and is especially well suited for large, complex or heavy math based projects. 
+
+The foundation of this system begins with the document class. The document class is where you define how a document is organized, how the hierarchy is constructed, and how the structural components behave. Understanding document classes are essential to learn how to understand LaTex overall. 
+
+\section{Document Classes in LaTex} 
+Every LaTex document begins with a declaration like
+
+\begin{verbatim}
+\documentclass{article}
+\end{verbatim} 
+
+The document class acts like a structural blueprint. It determines the page layout, heading hierarchy, numbering conventions, spacing rules, and default styling. Rather than directly specifying formatting direction, the author can select a class that governs the behavior of the document from start to finish. 
+
+Some common document classes that are used often include \texttt{article}, \texttt{report}, \texttt{book}, and \texttt{beamer}. The \texttt{article} class is commonly used for essays, homework, and research papers. it supports sections and subsections but doesn't include chapter-level organization. The \texttt{report} class is made for longer technical documents and introduces \texttt{\textbackslash chapter}, allowing projects to be divided into major parts. The \texttt{beamer} class differs from the others as it is designed for presentations. Instead of having to organize content into pages, it makes documents into frames that can function as slides. This shows how document classes reshape the whole model of a document while saving the same logical markup principles. 
+
+\section{Structural Commands and Hierarchy}
+LaTex has strict logical hierarchy through commands like \texttt{\textbackslash section}, \texttt{\textbackslash subsection}, and \texttt{\textbackslash chapter}. These commands display the role of content within the document rather than its visual appearance. 
+
+For example, 
+
+\begin{verbatim}
+\section{Background}
+\subsection{Historical Context} 
+\end{verbatim}
+
+The author doesn't explain font size, indentation or spacing. Instead the document class can automatically determine how these structural elements are shown. This automation ensures consistency across the whole document and gets rid of common formatting inconsistencies found in manual word processing systems. 
+
+The hierarchy of structural commands also determine how entries can appear in the table of contents. When the command \texttt{textbackslash tableofcontents} is used, this will automatically generate an outline based on the sectioning commands. This protects the importance of structure over visual styling. 
+
+\section{The Preamble and Document Body}
+
+Every LaTex file is divided into two parts, the preamble and the document body. The preamble contains everything before the command \texttt{\textbackslash begin\{document\}}. In this section, the author can select the document class, load packages, defines custom commands, and configure formatting options. 
+
+Packages extend the functionality of the document class. For example, \texttt{amsmath} enhances mathematical typesetting, while other packages can modify margins, enable hyperlinks or even customize headings. The modular design of LaTex allows document classes to provide structure while packages provide special capabilities. 
+
+The document body begins after \texttt{\textbackslash begin\{document\}} and contains the actual content. Structural commands in the body create a logical hierarchy that the document class can then format by itself. 
+
+\section{Separation of Content and Presentation} 
+
+A central design principle of LaTex is the separation of content from presentation. The author describes what the content represents, while the document class and associated packages determine how it should appear. 
+
+This reflects broader principles found in computer science, especially abstraction and modularity. The document class abstracts away formatting decisions, allowing authors to be able to focus on semantic structure. Due to the separation, the same content can be recompiled under a whole new document class to produce a whole new result of output without changing any of the text. 
+
+For example, 
+you can switch from: 
+
+\begin{verbatim}
+\documentclass{article}
+\end{verbatim}
+
+to
+
+\begin{verbatim}
+\documentclass{report}
+\end{verbatim}
+
+and it will instantly change the available hierarchy and formatting behavior. This shows how document classes can define the architecture of a document. 
+
+\section{Beamer as a Structural Extension}
+
+The beamer document class shows how LaTex adapts its structural model for presentations. Instead of chapters and sections appearing across pages, beamer introduces the concept of frames. Each frame displays a single slide, and structural commands are used to maintain organization for a presentation environment. Although the visual format can change drastically, the underlying philosophy stays the same. Authors can explain structure logically, while themes and templates control visual design. This consistency across document types highlight the strengths of LaTex's design. 
+
+\section{Conclusion}
+
+Document classes from the structural foundation of LaTex. By defining the organizational hierarchy and formatting behavior of a document, they can enable authors to produce consistent output without having to manage visual details. Through structured commands and modular package extensions, LaTex balances a clear separation between content and presentation. 
+
+Classes like \texttt{article}, \texttt{report}, and \texttt{beamer} demonstrate how the same principles can support essays, reports, books, and finally presentations. Understanding how document classes work and their role in structural design is therefore needed to mastering LaTex as a document preparation system. 
+
+\end{document}
+</code></pre>
+    
+</body>
+</html>
